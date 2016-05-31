@@ -8,10 +8,18 @@
  * Controller of the santeplusApp
  */
 angular.module('santeplusApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  	.controller('MainCtrl', function ($scope, articleService) {
+    	this.awesomeThings = [
+      		'HTML5 Boilerplate',
+      		'AngularJS',
+      		'Karma'
+    	];
+
+    	articleService.getArticles().then(function( articles ) {
+            $scope.articles = articles;
+        });
+    	
+
+
+
+	});
