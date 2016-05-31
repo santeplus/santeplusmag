@@ -9,10 +9,11 @@
 angular.module('santeplusApp')
   .directive('articleItem', function () {
     return {
-      template: '<div></div>',
+      templateUrl: 'views/article-item.html',
       restrict: 'E',
-      link: function postLink(scope, element, attrs) {
-        element.text('this is the articleItem directive');
-      }
+      replace: true,
+      controller: ['$scope', function($scope) {
+
+      }]
     };
   });
