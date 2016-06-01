@@ -9,12 +9,9 @@
  */
 angular.module('santeplusApp')
     .service('articleService', function ($http, $q ) {
-                // Return public API.
-    	return({
-    	    getArticles: getArticles
-    	});
+    	var currentArticles = [];
 
-    	function getArticles() {
+    	this.getArticles = function() {
     	    var request = $http({
     	        method: "get",
     	        url: "http://sante.santeplusmag.fr/wp-json/wp/v2/posts?per_page=4",
@@ -23,6 +20,35 @@ angular.module('santeplusApp')
     	        }
     	    });
     	    return( request.then( handleSuccess, handleError ) );
+    	}
+
+        // From Current Object
+    	this.getArticle = function(id)
+    	{
+    		return _.findWhere(currentArticles, {'id': parseInt(id)});
+    	}
+
+        // From WebService
+        this.getArticleById = function(id)
+        {
+            var request = $http({
+                method: "get",
+                url: "http://sante.santeplusmag.fr/wp-json/wp/v2/posts/" + id,
+                params: {
+                    action: "get"
+                }
+            });
+            return( request.then( handleSuccess, handleError ) );
+        }
+
+    	this.populateArticles = function(articles)
+    	{
+    		currentArticles = currentArticles.concat(articles);
+    	}
+
+    	this.getCurrentArticles = function()
+    	{
+    		return currentArticles;
     	}
 
     	// ---
