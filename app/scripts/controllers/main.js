@@ -16,7 +16,15 @@ angular.module('santeplusApp')
     	];
 
     	articleService.getArticles().then(function( articles ) {
-            $scope.articles = articles;
             articleService.populateArticles(articles);
+            $scope.articles = articleService.getCurrentArticles();
         });
+
+        $scope.loadMore = function()
+        {
+            articleService.getArticles().then(function( articles ) {
+                articleService.populateArticles(articles);
+                $scope.articles = articleService.getCurrentArticles();
+            });
+        };
 });
