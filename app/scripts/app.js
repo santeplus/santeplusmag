@@ -8,6 +8,8 @@
  *
  * Main module of the application.
  */
+ 
+//commit
 angular
   .module('santeplusApp', [
     'ngAnimate',
