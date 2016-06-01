@@ -10,17 +10,22 @@
 angular.module('santeplusApp')
     .service('articleService', function ($http, $q ) {
     	var currentArticles = [];
-
+        var currentPage = 1;
     	this.getArticles = function() {
     	    var request = $http({
     	        method: "get",
-    	        url: "http://sante.santeplusmag.fr/wp-json/wp/v2/posts?per_page=4",
+    	        url: "http://sante.santeplusmag.fr/wp-json/wp/v2/posts?per_page=4&page=" + currentPage,
     	        params: {
     	            action: "get"
     	        }
     	    });
+            currentPage ++;
     	    return( request.then( handleSuccess, handleError ) );
     	}
+
+        this.getCurrentArticles = function() {
+            return currentArticles;
+        }
 
         // From Current Object
     	this.getArticle = function(id)

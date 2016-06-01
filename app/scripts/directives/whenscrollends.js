@@ -11,18 +11,20 @@ angular.module('santeplusApp')
     return {
         restrict: "A",
         link: function(scope, element, attrs) {
-            var visibleHeight = element.height();
-            var threshold = 100;
 
-            element.scroll(function() {
-                var scrollableHeight = element.prop('scrollHeight');
-                var hiddenContentHeight = scrollableHeight - visibleHeight;
-
-                if (hiddenContentHeight - element.scrollTop() <= threshold) {
-                    // Scroll is almost at the bottom. Loading more rows
-                    scope.$apply(attrs.whenScrollEnds);
-                }
-            });
+        	var deviceAgent = navigator.userAgent.toLowerCase();
+  			var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+	
+  			// on déclence une fonction lorsque l'utilisateur utilise sa molette 
+		  	$(window).scroll(function() {		
+		  	  // cette condition vaut true lorsque le visiteur atteint le bas de page
+		  	  // si c'est un iDevice, l'évènement est déclenché 150px avant le bas de page
+		  	  if(($(window).scrollTop() + $(window).height()) == $(document).height()
+		  	  || agentID && ($(window).scrollTop() + $(window).height()) + 150 > $(document).height()) {
+		  	    // on effectue nos traitements
+		  	    scope.$apply(attrs.whenScrollEnds);
+		  	  }
+		  	});
         }
     };
   });
