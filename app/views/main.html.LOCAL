@@ -1,0 +1,5 @@
+<div class="jumbotron">
+  <p class="lead">
+    <img src="images/logo-accroche.png" alt="Santé +"><br>
+</div>
+<article-item ng-repeat="article in articles"></article-item>
