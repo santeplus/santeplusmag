@@ -41,6 +41,9 @@ body {
 img.logo-img {
     width: 80px;
 }
+img {
+    width: 100%;
+}
 button.partage-button- {
     background: none;
     color: #fff;
