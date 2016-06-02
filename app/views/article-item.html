@@ -3,8 +3,8 @@
 <a ng-href="#/article/{{article.id}}"><p ng-bind-html="article.title.rendered"></p></a>
 <p ng-bind-html="article.excerpt.rendered"></p>
 <div class="partage-button">
-<a href="">
-	<button class="partage-button-" onclick="addCount();">
+<a href="https://www.facebook.com/sharer/sharer.php?u={{article.link|encodeUri}}&t={{article.title.rendered}}">
+	<button class="partage-button-">
 		<div style="width:20px;margin:auto;">
 			<img src="../images/fb.png" style="
     display: block;
@@ -16,8 +16,9 @@
 	</button>
 </a>
 
-<a href="">
-	<button class="partage-button-" onclick="addCount();">
+<a href="whatsapp://send?text={{article.title.rendered}}" 
+            data-action="{{article.link}}">
+	<button class="partage-button-">
 		<div style="width:20spx;margin:auto;">
 			<img src="../images/Whatsapplogo.png" style="
     display: block;

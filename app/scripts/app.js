@@ -17,7 +17,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'rt.encodeuri'
   ])
   .config(function ($routeProvider) {
     $routeProvider
