@@ -1,5 +1,5 @@
 <div class="article-item">
-<img ng-src="{{article.featured_image_thumbnail_url}}">
+<a ng-href="#/article/{{article.id}}"><img ng-src="{{article.featured_image_thumbnail_url}}"></a>
 <a ng-href="#/article/{{article.id}}"><p ng-bind-html="article.title.rendered"></p></a>
 <p ng-bind-html="article.excerpt.rendered"></p>
 <div class="partage-button">

@@ -1,5 +1,6 @@
 <div id="article">
 <img ng-src="{{currentArticle.featured_image_thumbnail_url}}">
+<h4 ng-bind-html="article.date"></h4>
 	<p ng-bind-html="currentArticle.content.rendered"></p>
 	<div class="partage-button">
 <a href="https://www.facebook.com/sharer/sharer.php?u={{currentArticle.link|encodeUri}}&t={{currentArticle.title.rendered}}">	
@@ -30,4 +31,5 @@
 </a>
 </div>
 </div>
+
 
