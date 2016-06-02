@@ -21,6 +21,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+  <header class="nav-down">
     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -33,7 +34,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">santeplus</a>
+            <a class="navbar-brand" href="#/"><img class="logo-img" src="/images/logo-accroche.png"></a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -47,7 +48,7 @@
         </div>
       </div>
     </div>
-
+</header>
     <div class="container">
     <div ng-view="" autoscroll="true"></div>
     </div>
@@ -81,6 +82,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -92,6 +94,7 @@
         <script src="scripts/services/articleservice.js"></script>
         <script src="scripts/controllers/article.js"></script>
         <script src="scripts/directives/whenscrollends.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <!-- endbuild -->
 </body>
 </html>
