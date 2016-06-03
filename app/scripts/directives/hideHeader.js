@@ -51,7 +51,7 @@
                         }
                         
                         lastScrollTop = st;
-                        scope.$apply(attrs.hideHeader);
+                        scope.$apply(attrs.hi);
                     }
 
                             }
