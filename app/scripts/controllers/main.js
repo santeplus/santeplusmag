@@ -27,4 +27,7 @@ angular.module('santeplusApp')
                 $scope.articles = articleService.getCurrentArticles();
             });
         };
+                   
 });
+
+

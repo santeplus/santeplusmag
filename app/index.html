@@ -21,6 +21,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+  <header class="nav-down">
     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -33,7 +34,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">santeplus</a>
+            <a class="navbar-brand" href="#/"><img class="logo-img" src="/images/logo-accroche.png"></a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -47,14 +48,14 @@
         </div>
       </div>
     </div>
-
+</header>
     <div class="container">
     <div ng-view="" autoscroll="true"></div>
     </div>
 
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p>With <span class="glyphicon glyphicon-heart"></span> by Santé+</p>
       </div>
     </div>
 
@@ -82,6 +83,7 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular-encode-uri/dist/angular-encode-uri.js">
     <!-- endbower -->
     <!-- endbuild -->
 

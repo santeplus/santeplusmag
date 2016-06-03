@@ -1,5 +1,33 @@
 <div class="article-item">
-<img ng-src="{{article.featured_image_thumbnail_url}}">
+<a ng-href="#/article/{{article.id}}"><img ng-src="{{article.featured_image_thumbnail_url}}"></a>
 <a ng-href="#/article/{{article.id}}"><p ng-bind-html="article.title.rendered"></p></a>
 <p ng-bind-html="article.excerpt.rendered"></p>
+<div class="partage-button">
+<a href="https://www.facebook.com/sharer/sharer.php?u={{article.link|encodeUri}}&t={{article.title.rendered}}">
+	<button class="partage-button-">
+		<div style="width:20px;margin:auto;">
+			<img src="../images/fb.png" style="
+    display: block;
+    float: left;
+    line-height: 15px;
+    width:30px;
+"/>
+		</div>
+	</button>
+</a>
+
+<a href="whatsapp://send?text={{article.title.rendered}}" 
+            data-action="{{article.link}}">
+	<button class="partage-button-">
+		<div style="width:20spx;margin:auto;">
+			<img src="../images/Whatsapplogo.png" style="
+    display: block;
+    float: left;
+    line-height: 15px;
+    width:30px;
+"/>
+		</div>
+	</button>
+</a>
+</div>
 </div>
