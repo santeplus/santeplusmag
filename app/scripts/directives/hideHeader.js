@@ -16,7 +16,7 @@
 
                     // Hide Header on on scroll down
                     var didScroll;
-                    var lastScrollTop = 0;
+                    var lastScrollTop = 0;  
                     var delta = 5;
                     var navbarHeight = $('header').outerHeight();
 
@@ -51,6 +51,7 @@
                         }
                         
                         lastScrollTop = st;
+                        scope.$apply(attrs.hideHeader);
                     }
 
                             }
