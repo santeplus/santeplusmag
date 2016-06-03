@@ -20,7 +20,8 @@ angular.module('santeplusApp')
           adFormat : '@'
       },
       link: function postLink(scope, element, attrs) {
-      	console.log($("#" + containerId).html());
+      	console.log("#" + scope.containerId);
+      	console.log($("#" + scope.containerId));
       }
     };
   });

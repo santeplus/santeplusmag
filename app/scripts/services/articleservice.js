@@ -8,7 +8,7 @@
  * Service in the santeplusApp.
  */
 angular.module('santeplusApp')
-    .service('articleService', function ($http, $q ) {
+    .service('articleService', function ($http, $q, advertisingService ) {
     	var currentArticles = [];
         var currentPage = 1;
     	this.getArticles = function() {
@@ -55,6 +55,19 @@ angular.module('santeplusApp')
     	{
     		return currentArticles;
     	}
+
+        this.injectAdverts = function(article)
+        {
+            article.content.rendered = advertisingService.injectADX(article.content.rendered, "start", "1234");
+            article.content.rendered = advertisingService.injectADX(article.content.rendered, "end", "1235");
+            article.content.rendered = advertisingService.injectADX(article.content.rendered, "center", "1236");
+            return article;
+        }
+
+        function getLastParagraphNumber(html)
+        {
+
+        }
 
     	// ---
         // PRIVATE METHODS.

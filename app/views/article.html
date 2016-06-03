@@ -1,7 +1,7 @@
 <div id="article">
 	<img ng-src="{{currentArticle.featured_image_thumbnail_url}}" alt="" />
 	<h1 ng-bind-html="currentArticle.title.rendered"></h1>
-	<p id="content" ng-bind-html="currentArticle.content.rendered"></p>
+	<p id="content" ng-bind-html="currentArticle.content.rendered | trusted"></p>
 </div>
 
 <ad-placement container-id="content"></ad-placement>
