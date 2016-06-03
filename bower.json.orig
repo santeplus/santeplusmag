@@ -10,8 +10,12 @@
     "angular-route": "^1.4.0",
     "angular-sanitize": "^1.4.0",
     "angular-touch": "^1.4.0",
-    "underscore": "^1.8.3",    
+<<<<<<< HEAD
+    "underscore": "^1.8.3"
+=======
+    "underscore": "^1.8.3",
     "angular-encode-uri": "^1.0.0"
+>>>>>>> 59e7b9cc84a8e4fd47fd8ca8d23adf41d3b5e2af
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0",

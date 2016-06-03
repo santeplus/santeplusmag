@@ -1,3 +1,9 @@
 <div id="articles" when-scroll-ends="loadMore()">
-  <article-item ng-repeat="article in articles"></article-item>
+  <div ng-repeat="article in articles">
+  	<div ng-if="$index % 6 == 0"> <img src='http://www.hamovhotov.com/advertisement/wp-content/uploads/2007/03/300x250ad.gif'> </div>
+  	<article-item></article-item>
+  	<div ng-if="$index % 6 == 2"> <img src='http://www.hamovhotov.com/advertisement/wp-content/uploads/2007/03/300x250ad.gif'> </div>
+
+  </div>
+  
 </div>
