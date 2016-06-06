@@ -14,7 +14,7 @@
                             link: function(scope, element, attrs) {
 
 
-                    // Hide Header on on scroll down
+                    // Hide Header on scroll down
                     var didScroll;
                     var lastScrollTop = 0;  
                     var delta = 5;

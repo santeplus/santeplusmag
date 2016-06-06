@@ -1,6 +1,6 @@
 <div class="article-item" style="background :#fff;" >
 <a ng-href="#/article/{{article.id}}"><img class="img-article" ng-src="{{article.featured_image_thumbnail_url}}"></a>
-<a ng-href="#/article/{{article.id}}"><p ng-bind-html="article.title.rendered"></p></a>
+<a ng-href="#/article/{{article.id}}"><h3 ng-bind-html="article.title.rendered"></h3></a>
 <p ng-bind-html="article.excerpt.rendered"></p>
 <div class="partage-button">
 <a href="https://www.facebook.com/sharer/sharer.php?u={{article.link|encodeUri}}&t={{article.title.rendered}}">
