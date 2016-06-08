@@ -30,14 +30,12 @@ angular.module('santeplusApp')
             this.elements = elems;
         }
 
-
         // From WebService
- 
 
-    /*	this.populateElements = function(elements)
+    	this.populateElements = function(elems)
     	{
-    		currentArticles = currentArticles.concat(articles);
-    	}*/
+    		elements = elements.concat(elems);
+    	}
 
     	// ---
         // PRIVATE METHODS.
