@@ -14,20 +14,20 @@ angular.module('santeplusApp')
     	this.getElements = function() {
     	    var request = $http({
     	        method: "get",
-    	        url: "http://sante.santeplusmag.fr/wp-json/wp-api-menus/v2/menus/46" ,
+    	        url: "http://sante.santeplusmag.fr/wp-json/wp-api-menus/v2/menus/46",
     	        params: {
     	            action: "get"
     	        }
     	    });
-    	    return(request.then( handleSuccess, handleError ) );
+    	    return(request.then( handleSuccess, handleError ));
     	}
 
         this.getMenuElements = function() {
                 return elements;
-            
+                
         }
         this.setElements = function (elems){
-            this.elements = elements;
+            this.elements = elems;
         }
 
 
