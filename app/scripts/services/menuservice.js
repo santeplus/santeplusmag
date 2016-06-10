@@ -32,10 +32,10 @@ angular.module('santeplusApp')
 
         // From WebService
 
-    	this.populateElements = function(elems)
+    /*	this.populateElements = function(elems)
     	{
     		elements = elements.concat(elems);
-    	}
+    	}*/
 
     	// ---
         // PRIVATE METHODS.

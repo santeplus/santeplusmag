@@ -1,23 +1,20 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name santeplusApp.controller:MenuCtrl
+ * @ngdoc directive
+ * @name santeplusApp.directive:menu
  * @description
- * # MenuCtrl
- * Controller of the santeplusApp
+ * # menu
  */
 angular.module('santeplusApp')
-  .controller('MenuCtrl', function ($routeParams, $scope, menuService) {
-    if(menuService.getElements())
-    {
-    	$scope.currentElements = menuService.injectAdverts(menuService.getElements());
-   	}
-  	else
-  	{
-  		menuService.getMenuElements().then(function( elems ) {
-            $scope.currentElement = menuService.injectAdverts(elems);
-        });
-  	}
-    
+  .directive('menu', function () {
+    return {
+      templateUrl: 'views/menu.html',
+      restrict: 'E',
+      replace: true,
+      controller: ['$scope', function($scope) {
+
+      }]
+    };
   });
+
