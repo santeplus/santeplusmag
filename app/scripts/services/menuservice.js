@@ -9,7 +9,7 @@
  */
 angular.module('santeplusApp')
     .service('menuService', function ($http, $q ) {
-    	var elements = [];
+    	var items = [];
         var menu = [];
     	this.getElements = function() {
     	    var request = $http({
@@ -23,11 +23,11 @@ angular.module('santeplusApp')
     	}
 
         this.getMenuElements = function() {
-                return elements;
+                return items;
                 
         }
         this.setElements = function (elems){
-            this.elements = elems;
+            this.items = elems;
         }
 
         // From WebService

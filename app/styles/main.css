@@ -8,6 +8,7 @@
 body {
   padding: 0;
   padding-top: 70px;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -53,7 +54,8 @@ ul.nav.navbar-nav {
     background: #fff;
 }
 .ng-scope {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    
 }
 img.img-article {
     width: 100%;
@@ -78,8 +80,9 @@ h4.ng-binding {
   margin: 30px 0;
 }
 p {
-    margin: 5px 10px 10px;
+    margin: 5px 5px 10px;
     font-size: 16px;
+    color: #4c4d4e;
 }
 h2.h2post {
     font-size: 24px;
@@ -88,10 +91,12 @@ h3, .h3 {
     font-size: 20px;
     margin-left: 10px;
     margin-right: 5px;
-    color: crimson;
+    margin-top: 10px;
+    color: #4c4d4e;
 }
 h2 {
     font-size: 19px;
+    line-height: 1.3em;
 }
 .partage-button {
     background-color: #f8f8f8;
@@ -125,6 +130,12 @@ a.navbar-brand {
 }
 .marketing p + h4 {
   margin-top: 28px;
+}
+.list-unstyled {
+  display: block;
+  float: left;
+  margin-bottom: 5px;
+
 }
 
 /* Responsive: Portrait tablets and up */
