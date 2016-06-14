@@ -36,6 +36,13 @@
 
             <a class="navbar-brand" href="#/"><img class="logo-img" src="images/logo-accroche.png"></a>
           </div>
+
+<<<<<<< 2cd0647fe834f843011e0cb62805f564181118fd
+          <div  class="collapse navbar-collapse" id="js-navbar-collapse">
+             <menu  autoscroll="true"></menu>
+  
+              </div>
+=======
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
@@ -43,9 +50,8 @@
               <li><a ng-href="#/categorie/sante">Santé</a></li>
               <li><a ng-href="#/categorie/nutrition">Nutrition</a></li>
             </ul>
+>>>>>>> Categorie
           </div>
-        </div>
-      </div>
     </div>
 </header>
     <div class="container">

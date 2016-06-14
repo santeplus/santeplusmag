@@ -21,7 +21,7 @@ angular.module('santeplusApp')
     	this.getArticles = function() {
     	    var request = $http({
     	        method: "get",
-    	        url: "http://www.santeplusmag.fr/wp-json/wp/v2/posts?per_page=3&page=" + currentPage,
+    	        url: "http://www.santeplusmag.com/wp-json/wp/v2/posts?per_page=3&page=" + currentPage,
     	        params: {
     	            action: "get"
     	        }
@@ -33,7 +33,7 @@ angular.module('santeplusApp')
         this.getArticlesByCategory = function(slug) {
             var request = $http({
                 method: "get",
-                url: "http://www.santeplusmag.fr/wp-json/wp/v2/posts?per_page=3&page=" + currentPage + "&filter[category_name]=" + slug,
+                url: "http://www.santeplusmag.com/wp-json/wp/v2/posts?per_page=3&page=" + currentPage + "&filter[category_name]=" + slug,
                 params: {
                     action: "get"
                 }
@@ -57,7 +57,7 @@ angular.module('santeplusApp')
         {
             var request = $http({
                 method: "get",
-                url: "http://www.santeplusmag.fr/wp-json/wp/v2/posts/" + id,
+                url: "http://www.santeplusmag.com/wp-json/wp/v2/posts/" + id,
                 params: {
                     action: "get"
                 }
