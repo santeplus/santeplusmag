@@ -24,18 +24,25 @@ angular.module('santeplusApp')
   			}
   			else
   			{
+                $.expr[':'].textEquals = $.expr.createPseudo(function(arg) {
+                    return function( elem ) {
+                        return $(elem).text().match("^" + arg + "$");
+                    };
+                });
+
   				var nParagraph = 0;
   				if(position == "start")
   					nParagraph = 0;
   				else if(position == "end")
-  					nParagraph = elem.find("p:not(:empty)").length - 2;
+  					nParagraph = elem.find("p:not(:empty):not(:textEquals('\\n')), ul, ol").length - 2;
   				else if(position == "center")
-  					nParagraph = parseInt( elem.find("p:not(:empty)").length / 2 );
-  				$(ad_html).insertAfter(elem.find("p:not(:empty)").eq(nParagraph));
+  					nParagraph = parseInt( elem.find("p:not(:empty):not(:textEquals('\\n')), ul, ol").length / 2 );
+  				$(ad_html).insertAfter(elem.find("p:not(:empty):not(:textEquals('\\n')), ul, ol").eq(nParagraph));
   			}
 
   			return elem.html();
   			
   		}
     // AngularJS will instantiate a singleton by calling "new" on this function
-  });
+});
+

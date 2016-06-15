@@ -11,6 +11,13 @@ angular.module('santeplusApp')
     .service('articleService', function ($http, $q, advertisingService ) {
     	var currentArticles = [];
         var currentPage = 1;
+
+        this.init = function()
+        {
+            currentArticles = [];
+            currentPage = 1;
+        }
+
     	this.getArticles = function() {
     	    var request = $http({
     	        method: "get",
@@ -22,6 +29,30 @@ angular.module('santeplusApp')
             currentPage ++;
     	    return( request.then( handleSuccess, handleError ) );
     	}
+
+        this.getArticlesByCategory = function(slug) {
+            var request = $http({
+                method: "get",
+                url: "http://www.santeplusmag.com/wp-json/wp/v2/posts?per_page=3&page=" + currentPage + "&filter[category_name]=" + slug,
+                params: {
+                    action: "get"
+                }
+            });
+            currentPage ++;
+            return( request.then( handleSuccess, handleError ) );
+        }
+
+        this.getPopularArticles = function() {
+            var request = $http({
+                method: "get",
+                url: "http://www.santeplusmag.com/wp-json/wp/v2/popular_posts?per_page=3&page=" + currentPage,
+                params: {
+                    action: "get"
+                }
+            });
+            currentPage ++;
+            return( request.then( handleSuccess, handleError ) );
+        }
 
         this.getCurrentArticles = function() {
             return currentArticles;

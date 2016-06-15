@@ -2,39 +2,26 @@
 
 /**
  * @ngdoc function
- * @name santeplusApp.controller:MainCtrl
+ * @name santeplusApp.controller:CategorieCtrl
  * @description
- * # MainCtrl
+ * # CategorieCtrl
  * Controller of the santeplusApp
  */
 angular.module('santeplusApp')
-  	.controller('MainCtrl', function ($scope, articleService) {
-    	this.awesomeThings = [
-      		'HTML5 Boilerplate',
-      		'AngularJS',
-      		'Karma'
-    	];
-
-        articleService.init();
-        
-    	articleService.getArticles().then(function( articles ) {
+  	.controller('CategorieCtrl', function ($scope, $routeParams, articleService) {
+  		var categorie = $routeParams.slug;
+  		articleService.init();
+    	articleService.getArticlesByCategory(categorie).then(function( articles ) {
             articleService.populateArticles(articles);
             $scope.articles = articleService.getCurrentArticles();
         });
 
         $scope.loadMore = function()
         {
-            articleService.getArticles().then(function( articles ) {
+            articleService.getArticlesByCategory(categorie).then(function( articles ) {
                 articleService.populateArticles(articles);
                 $scope.articles = articleService.getCurrentArticles();
             });
         };
-
-      
-
-  
-
                    
 });
-
-

@@ -8,7 +8,7 @@
  * Controller of the santeplusApp
  */
 angular.module('santeplusApp')
-  .controller('ArticleCtrl', function ($routeParams, $scope, articleService, advertisingService) {
+.controller('ArticleCtrl', function ($routeParams, $scope, articleService, advertisingService) {
     var articleId = $routeParams.id;
     if(articleService.getArticle(articleId))
     {
@@ -20,4 +20,19 @@ angular.module('santeplusApp')
             $scope.currentArticle = articleService.injectAdverts(article);
         });
   	}
-  });
+})
+.controller('PopularArticlesCtrl', function ($routeParams, $scope, articleService, advertisingService) {
+    articleService.init();
+    articleService.getPopularArticles().then(function( articles ) {
+        articleService.populateArticles(articles);
+        $scope.articles = articleService.getCurrentArticles();
+    });
+
+    $scope.loadMore = function()
+    {
+        articleService.getPopularArticles().then(function( articles ) {
+            articleService.populateArticles(articles);
+            $scope.articles = articleService.getCurrentArticles();
+        });
+    };
+});
