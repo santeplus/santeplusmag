@@ -42,6 +42,18 @@ angular.module('santeplusApp')
             return( request.then( handleSuccess, handleError ) );
         }
 
+        this.getPopularArticles = function() {
+            var request = $http({
+                method: "get",
+                url: "http://www.santeplusmag.com/wp-json/wp/v2/popular_posts?per_page=3&page=" + currentPage,
+                params: {
+                    action: "get"
+                }
+            });
+            currentPage ++;
+            return( request.then( handleSuccess, handleError ) );
+        }
+
         this.getCurrentArticles = function() {
             return currentArticles;
         }
