@@ -1,0 +1,54 @@
+'use strict';
+
+/**
+ * @ngdoc overview
+ * @name santeplusApp
+ * @description
+ * # santeplusApp
+ *
+ * Main module of the application.
+ */
+ 
+//commit
+angular
+  .module('santeplusApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch',
+    'rt.encodeuri'
+  ])
+  .config(function ($routeProvider, $locationProvider) {
+    $routeProvider
+        .when('/', {
+          templateUrl: 'views/main.html',
+          controller: 'MainCtrl',
+          controllerAs: 'main'
+        })
+        .when('/about', {
+          templateUrl: 'views/about.html',
+          controller: 'AboutCtrl',
+          controllerAs: 'about'
+        })
+        .when('/article/:id', {
+          templateUrl: 'views/article.html',
+          controller: 'ArticleCtrl',
+          controllerAs: 'article'
+        })
+        .when('/categorie/:slug', {
+          templateUrl: 'views/main.html',
+          controller: 'CategorieCtrl',
+          controllerAs: 'categorie'
+        })
+        .otherwise({
+          redirectTo: '/'
+        });
+  });
+
+<<<<<<< HEAD
+      
+=======
+>>>>>>> 99b5035a2a3ce36caf5bb3cb422ec0669a25f9d9
+

@@ -36,22 +36,25 @@
 
             <a class="navbar-brand" href="#/"><img class="logo-img" src="images/logo-accroche.png"></a>
           </div>
-
-<<<<<<< 2cd0647fe834f843011e0cb62805f564181118fd
-          <div  class="collapse navbar-collapse" id="js-navbar-collapse">
-             <menu  autoscroll="true"></menu>
-  
-              </div>
-=======
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
+<<<<<<< HEAD
+          <div  class="collapse navbar-collapse" id="js-navbar-collapse">
+             <menu></menu>
+              
+          </div>
+        </div>
+    </div>
+=======
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
               <li><a ng-href="#/categorie/sante">Santé</a></li>
               <li><a ng-href="#/categorie/nutrition">Nutrition</a></li>
             </ul>
->>>>>>> Categorie
           </div>
+        </div>
+      </div>
+>>>>>>> 99b5035a2a3ce36caf5bb3cb422ec0669a25f9d9
     </div>
 </header>
     <div class="container">
@@ -103,7 +106,15 @@
         <script src="scripts/directives/adplacement.js"></script>
         <script src="scripts/services/advertisingservice.js"></script>
         <script src="scripts/filters/filters.js"></script>
+<<<<<<< HEAD
+        <script src="scripts/directives/menu.js"></script>
+        <script src="scripts/services/menuservice.js"></script>
+
+
+
+=======
         <script src="scripts/controllers/categorie.js"></script>
+>>>>>>> 99b5035a2a3ce36caf5bb3cb422ec0669a25f9d9
         <!-- endbuild -->
 </body>
 </html>
