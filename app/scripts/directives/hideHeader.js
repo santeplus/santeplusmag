@@ -1,59 +1,37 @@
-                    'use strict';
+// Hide Header on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
 
-                    /**
-                     * @ngdoc directive
-                     * @name santeplusApp.directive:hideHeader
-                     * @description
-                     * # hideHeader
-                     */
+$(window).scroll(function(event){
+    didScroll = true;
+});
 
-                    angular.module('santeplusApp')
-                      .directive('hideHeader', function () {
-                        return {
-                            restrict: "A",
-                            link: function(scope, element, attrs) {
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
 
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
 
-                    // Hide Header on scroll down
-                    var didScroll;
-                    var lastScrollTop = 0;  
-                    var delta = 5;
-                    var navbarHeight = $('header').outerHeight();
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
 
-                    $(window).scroll(function(event){
-                        didScroll = true;
-                    });
-
-                    setInterval(function() {
-                        if (didScroll) {
-                            hasScrolled();
-                            didScroll = false;
-                        }
-                    }, 250);
-
-                    function hasScrolled() {
-                        var st = $(this).scrollTop();
-                        
-                        // Make sure they scroll more than delta
-                        if(Math.abs(lastScrollTop - st) <= delta)
-                            return;
-                        
-                        // If they scrolled down and are past the navbar, add class .nav-up.
-                        // This is necessary so you never see what is "behind" the navbar.
-                        if (st > lastScrollTop && st > navbarHeight){
-                            // Scroll Down
-                            $('header').removeClass('nav-down').addClass('nav-up');
-                        } else {
-                            // Scroll Up
-                            if(st + $(window).height() < $(document).height()) {
-                                $('header').removeClass('nav-up').addClass('nav-down');
-                            }
-                        }
-                        
-                        lastScrollTop = st;
-                        scope.$apply(attrs.hideHeader);
-                    }
-
-                            }
-                        };
-                      });
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}

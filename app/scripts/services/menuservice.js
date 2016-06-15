@@ -9,12 +9,12 @@
  */
 angular.module('santeplusApp')
     .service('menuService', function ($http, $q ) {
-    	var items = [];
+    	var elements = [];
         var menu = [];
     	this.getElements = function() {
     	    var request = $http({
     	        method: "get",
-    	        url: "http://sante.santeplusmag.fr/wp-json/wp-api-menus/v2/menus/46",
+    	        url: "http://www.santeplusmag.com/wp-json/wp-api-menus/v2/menus/46",
     	        params: {
     	            action: "get"
     	        }
@@ -23,11 +23,11 @@ angular.module('santeplusApp')
     	}
 
         this.getMenuElements = function() {
-                return items;
+                return elements;    
                 
         }
         this.setElements = function (elems){
-            this.items = elems;
+            this.elements = elems;
         }
 
         // From WebService

@@ -14,7 +14,7 @@ angular.module('santeplusApp')
     	this.getArticles = function() {
     	    var request = $http({
     	        method: "get",
-    	        url: "http://sante.santeplusmag.fr/wp-json/wp/v2/posts?per_page=3&page=" + currentPage,
+    	        url: "http://www.santeplusmag.com/wp-json/wp/v2/posts?per_page=3&page=" + currentPage,
     	        params: {
     	            action: "get"
     	        }
@@ -38,7 +38,7 @@ angular.module('santeplusApp')
         {
             var request = $http({
                 method: "get",
-                url: "http://sante.santeplusmag.fr/wp-json/wp/v2/posts/" + id,
+                url: "http://www.santeplusmag.com/wp-json/wp/v2/posts/" + id,
                 params: {
                     action: "get"
                 }

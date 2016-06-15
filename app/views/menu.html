@@ -1,5 +1,23 @@
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-			 <ul class="list-unstyled">
-    			<li ng-repeat="item in items"><a ng-href="#!{{item.url}}">{{item.title}}</a></li>
-  			</ul>
+        <!--  <div class="collapse navbar-collapse" id="js-navbar-collapse">
+			<ul class="nav">
+                    <li ng-repeat="item in items" class="{{item.slug}}">
+                        <a href="{{item.url}}" class="{{item.children && 'dropdown-toggle' || ''}}" data-toggle="{{item.children && 'dropdown' || ''}}">{{item.title}} 
+                            <b ng-show="item.sub" class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu" ng-show="item.sub">
+                            <li ng-repeat="subItem in item.children">
+    							<a href="{{subItem.url}}">{{subItem.title}}</a>
+							</li>
+                        </ul>
+                    </li>
+                </ul>
+          </div>-->
+          <div>
+          	<ul>
+          		<li><a href="#/">HOME</a></li>
+          		<li ng-repeat="item in items" class="{{item.slug}}"><a href="#/categories/{{item.url}}">Nutrition</a></li>
+          		<li><a href="#/categories/{{item.url}}">Sante</a></li>
+          		<li><a href="#/categories/{{item.url}}">Psycho</a></li>
+          	</ul>
           </div>
+

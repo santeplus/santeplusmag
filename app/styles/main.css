@@ -9,6 +9,7 @@ body {
   padding: 0;
   padding-top: 70px;
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -19,15 +20,25 @@ body {
   padding-right: 0px;
 }
 
+
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
   height: 52px;
-  position: fixed;
   top: 0;
-  transition: top 0.2s ease-in-out;
   width: 100%;
+}
+.nav-up {
+  top: -52px; 
+  width: 100%
+}
+header.nav-down {
+    height: 52px;
+    position: fixed;
+    top: 0;
+    transition: all 0.15s ease-in-out;
+    width: 100%;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -46,6 +57,8 @@ button.partage-button- {
     background: none;
     color: #fff;
     border: 0px;
+    padding: 4px;
+    margin-left: 5px;
 }
 ul.nav.navbar-nav {
     margin: 7.5px 0px;
@@ -55,10 +68,11 @@ ul.nav.navbar-nav {
 }
 .ng-scope {
     margin-bottom: 15px;
-    
+
 }
 img.img-article {
     width: 100%;
+    border: 1px solid #e7e7e7;
 }
 h4.ng-binding {
     margin-left: 10px;
@@ -93,10 +107,13 @@ h3, .h3 {
     margin-right: 5px;
     margin-top: 10px;
     color: #4c4d4e;
+    font-weight: bold;
+    line-height: 1.2;
 }
 h2 {
     font-size: 19px;
     line-height: 1.3em;
+    margin-left: 5px;
 }
 .partage-button {
     background-color: #f8f8f8;

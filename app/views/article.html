@@ -1,9 +1,10 @@
 <div id="article" style="background:#FFF;">
 <img class="img-article"  ng-src="{{currentArticle.featured_image_thumbnail_url}}">
-<h4 ng-bind-html="currentArticle.date | date:'hh:mm'"></h4>
+<h4 ng-bind-html="currentArticle.date | date:'dd/MM/yyyy'" style="color:blue;font-size:14px"></h4>
 	<p id="content" ng-bind-html="currentArticle.content.rendered | trusted"></p>
 	<div class="partage-button">
-<a href="https://www.facebook.com/sharer/sharer.php?u={{currentArticle.link|encodeUri}}&t={{currentArticle.title.rendered}}">	
+<a href="https://www.facebook.com/sharer/sharer.php?u={{currentArticle.link|encodeUri}}&t={{currentArticle.title.rendered}}">
+<a href="#" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u={{article.link|encodeUri}}&t={{article.title.rendered}}', '_blank')">	
 	<button class="partage-button-" >
 		<div style="width:20px;margin:auto;">
 			<img src="images/fb.png" style="
