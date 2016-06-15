@@ -14,10 +14,7 @@
           </div>-->
           <div>
           	<ul>
-          		<li><a href="#/">HOME</a></li>
-          		<li ng-repeat="item in items" class="{{item.slug}}"><a href="#/categories/{{item.url}}">Nutrition</a></li>
-          		<li><a href="#/categories/{{item.url}}">Sante</a></li>
-          		<li><a href="#/categories/{{item.url}}">Psycho</a></li>
+          		<li ng-repeat="item in menu.items" class="{{item.slug}}"><a href="{{item.url}}">{{item.title}}</a></li>    	
           	</ul>
           </div>
 

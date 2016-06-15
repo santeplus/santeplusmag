@@ -37,7 +37,7 @@ header.nav-down {
     height: 52px;
     position: fixed;
     top: 0;
-    transition: all 0.15s ease-in-out;
+    transition: top 0.15s ease-in-out;
     width: 100%;
 }
 /* Make the masthead heading the same height as the navigation */
@@ -97,6 +97,7 @@ p {
     margin: 5px 5px 10px;
     font-size: 16px;
     color: #4c4d4e;
+    margin-right: 10px;
 }
 h2.h2post {
     font-size: 24px;
@@ -104,16 +105,16 @@ h2.h2post {
 h3, .h3 {
     font-size: 20px;
     margin-left: 10px;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-top: 10px;
     color: #4c4d4e;
     font-weight: bold;
-    line-height: 1.2;
 }
 h2 {
     font-size: 19px;
     line-height: 1.3em;
     margin-left: 5px;
+    margin-right: 5px;
 }
 .partage-button {
     background-color: #f8f8f8;
