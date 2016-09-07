@@ -1,46 +1,17 @@
-<div class="article-item" style="background :#fff;" >
-<a ng-href="#/article/{{article.id}}"><img class="img-article" ng-src="{{article.featured_image_thumbnail_url}}"></a>
-<a ng-href="#/article/{{article.id}}"><h3 ng-bind-html="article.title.rendered"></h3></a>
-<p ng-bind-html="article.excerpt.rendered"></p>
-<div class="partage-button">
-<a href="https://www.facebook.com/sharer/sharer.php?u={{article.link|encodeUri}}&t={{article.title.rendered}}">
-	<button class="partage-button-">
-		<div style="width:20px;margin:auto;">
-			<img src="images/fb.png" style="
-    display: block;
-    float: left;
-    line-height: 15px;
-    width:30px;
-"/>
-		</div>
-	</button>
-</a>
-
-<a href="whatsapp://send?text={{article.title.rendered}}" 
-            data-action="{{article.link}}">
-	<button class="partage-button-">
-		<div style="width:20spx;margin:auto;">
-			<img src="images/Whatsapplogo.png" style="
-    display: block;
-    float: left;
-    line-height: 15px;
-    width:30px;
-"/>
-		</div>
-	</button>
-</a>
-
-	<!--<a href="">
-	<button class="partage-button-">
-		<div style="width:20spx;margin:auto;">
-			<img src="images/more.png" style="
-    display: block;
-    float: right;
-    line-height: 15px;
-    width:25px;
-"/>
-		</div>
-	</button>
-</a>-->
-</div>
+<div class="article-item" style="background :#fff;" > <a ng-href="#!/{{article.relative_permalink}}" class="article-item-image"> <img class="img-article" ng-src="{{article.featured_image_thumbnail_url}}"> </a>
+  <h4 class="article-category" ng-bind-html="article.category_name"></h4>
+  <a ng-href="#!/{{article.relative_permalink}}" class="article-item-title">
+  <h1 ng-bind-html="article.title.rendered"> </h1>
+  </a>
+  <p ng-bind-html="article.excerpt.rendered" class="article-item-text"> </p>
+  <div class="partage-button-home" style="border-top: #ECECEC solid 1px;">
+    <ul class="socialbar" style="display: -webkit-inline-box !important; list-style-type: none !important; padding: 0; width: 215px; margin: auto;">
+      <li> <a href="http://www.facebook.com/sharer.php?u={{article.link|encodeUri}}&t={{article.title.rendered}}" data-icon="facebook" target="_blank" xtclib="share::facebook"> <img class="share_btn" src="images/Facebook.svg"> </a> </li>
+      <li> <a href="whatsapp://send?text={{article.link|encodeUri}}" data-icon="whatsapp" xtclib="share::whatsapp"> <img class="share_btn" src="images/WhatsApp.svg"> </a> </li>
+      <li> <a target="_blank" href="http://pinterest.com/pin/create/button/?url={{article.link|encodeUri}}&media={{article.featured_image_thumbnail_url}}&description={{article.title.rendered}}" class="pin-it-button" count-layout="horizontal"> <img border="0" class="share_btn" src="images/Pinterest.svg" title="Pin It" /> </a> </li>
+      <li> <a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text={{article.title.rendered}} http://www.santeplusmag.com/?p={{article.id}}"
+  data-size="large"> <img border="0" class="share_btn" src="images/Twitter.svg" title="Pin It" /> </a> </li>
+    </ul>
+  </div>
 </div>

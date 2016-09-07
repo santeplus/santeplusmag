@@ -1,9 +1,11 @@
-<div id="articles" when-scroll-ends="loadMore()">
-  <div ng-repeat="article in articles">
-  	<div ng-if="$index % 6 == 0"> <img src='http://www.hamovhotov.com/advertisement/wp-content/uploads/2007/03/300x250ad.gif'> </div>
-  	<article-item></article-item>
-  	<div ng-if="$index % 6 == 2"> <img src='http://www.hamovhotov.com/advertisement/wp-content/uploads/2007/03/300x250ad.gif'> </div>
 
+<div id="articles" when-scroll-ends="loadMore()">
+  <div ng-repeat="article in articles | without:currentArticle.id" class="article-list">
+  	<ad-placement-dfp ng-if="$index % 6 == 0 && $index != 0" adunit-code="NEW_MOBILE_HOME" adunit-dimensions="300x250,336x280,320x50" adunit-targeting='{"position": "{{$index}}" }' ></ad-placement-dfp>
+  	<div class="article-item-parent">
+  		<article-item></article-item>
+  	</div>
+  	<ad-placement-dfp ng-if="$index % 6 == 2" adunit-code="NEW_MOBILE_HOME" adunit-dimensions="300x250,336x280,320x50" adunit-targeting='{"position": "{{$index}}" }'></ad-placement-dfp>
   </div>
-  
+  <ng-loading ng-show="loading"></ng-loading>
 </div>

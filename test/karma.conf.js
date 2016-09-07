@@ -31,6 +31,11 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/underscore/underscore.js',
       'bower_components/angular-encode-uri/dist/angular-encode-uri.js',
+      'bower_components/angular-inview/angular-inview.js',
+      'bower_components/SHA-1/sha1.js',
+      'bower_components/angulartics/src/angulartics.js',
+      'bower_components/angulartics-google-analytics/lib/angulartics-ga.js',
+      'bower_components/ngDfp/angular-dfp.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

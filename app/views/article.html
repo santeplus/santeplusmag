@@ -1,44 +1,32 @@
-<div id="article" style="background:#FFF;">
-<img class="img-article"  ng-src="{{currentArticle.featured_image_thumbnail_url}}">
-<h4 ng-bind-html="currentArticle.date | date:'dd/MM/yyyy'" style="color:blue;font-size:14px"></h4>
-	<p id="content" ng-bind-html="currentArticle.content.rendered | trusted"></p>
-	<div class="partage-button">
-<a href="https://www.facebook.com/sharer/sharer.php?u={{currentArticle.link|encodeUri}}&t={{currentArticle.title.rendered}}">
-<a href="#" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u={{article.link|encodeUri}}&t={{article.title.rendered}}', '_blank')">	
-	<button class="partage-button-" >
-		<div style="width:20px;margin:auto;">
-			<img src="images/fb.png" style="
-    display: block;
-    float: left;
-    line-height: 15px;	
-    width:30px;
-"/>
-		</div>
-	</button>
-</a>
+<div class="wrapper">
+  <ng-loading ng-if="loading"></ng-loading>
+  <div in-view="hideFooter($inview)">
+	  <ad-placement-dfp adunit-code="NEW_SPM_HEADR" adunit-dimensions="300x250,336x280"></ad-placement-dfp>
+	  <div id="article" class="article_container">
+	    <h1 ng-bind-html="currentArticle.title.rendered"></h1>
+	    <img class="img-article"  ng-src="{{currentArticle.featured_image_thumbnail_url}}">
+	    <h4 ng-bind-html="currentArticle.author_name" style="color:#FFFFFF;font-size:14px"></h4>
+	    <p id="content" ng-bind-html="currentArticle.content.rendered | trusted"></p>
+	  </div>
+  </div>
 
-<a href="whatsapp://send?text={{currentArticle.title.rendered}}" 
-            data-action="{{currentArticle.link}}">
-	<button class="partage-button-" >
-		<div style="width:20spx;margin:auto;">
-			<img src="images/Whatsapplogo.png" style="
-    display: block;
-    float: left;
-    line-height: 15px;
-    width:30px;
-"/>
-		</div>
-	</button>
-</a>
+  
+  <ad-placement-ligatus></ad-placement-ligatus>
+  <ad-placement-taboola></ad-placement-taboola>
+  <div in-view="homePage()">
+    <div ng-include="'views/main.html'"></div>
+  </div>
 </div>
+<div ng-show="isVisible" class="footer" style="background: rgba(255, 255, 255, 0);">
+  <div class="partage-button">
+    <ul class="socialbar" style="display: -webkit-inline-box !important; list-style-type: none !important; padding: 0; width: 215px; margin: auto;">
+      <li> <a href="http://www.facebook.com/sharer.php?u={{currentArticle.link|encodeUri}}&t={{currentArticle.title.rendered}}" data-icon="facebook" target="_blank" xtclib="share::facebook"> <img class="share_btn" src="images/Facebook.svg"> </a> </li>
+      <li> <a href="whatsapp://send?text={{currentArticle.link|encodeUri}}" data-icon="whatsapp" xtclib="share::whatsapp"> <img class="share_btn" src="images/WhatsApp.svg"> </a> </li>
+      <li> <a target="_blank" href="http://pinterest.com/pin/create/button/?url={{currentArticle.link|encodeUri}}&media={{currentArticle.featured_image_thumbnail_url}}&description={{currentArticle.title.rendered}}" class="pin-it-button" count-layout="horizontal"> <img border="0" class="share_btn" src="images/Pinterest.svg" title="Pin It" /> </a> </li>
+      <li> <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{currentArticle.title.rendered}} http://www.santeplusmag.com/?p={{currentArticle.id}}" data-size="large"> <img border="0" class="share_btn" src="images/Twitter.svg" title="Pin It" /> </a> </li>
+      <!-- <li>
+                <button class="btn btn-next" ng-click="nextArticle()" ng-if="articles.length > 0">Article Suivant</button>
+            </li> -->
+    </ul>
+  </div>
 </div>
-
-<ad-placement-taboola></ad-placement-taboola>
-
-<ad-placement-ligatus></ad-placement-ligatus>
-
-<div ng-controller="PopularArticlesCtrl">
-	<div ng-include="'views/main.html'"></div>
-</div>
-
-

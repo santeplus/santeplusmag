@@ -1,10 +1,12 @@
 <!doctype html>
-<html>
+<html ng-app="santeplusApp">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Santé+ Magazine - Le magazine de la santé naturelle</title>
     <meta name="description" content="">
+    <meta name="fragment" content="!" />
     <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="favicon.png"/>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -15,13 +17,13 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="santeplusApp" style="background:#e7e7e7">
+  <body >
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-<header class="nav-down">
+<header class="nav-down">       
    <div class="header">
      <div class="navbar navbar-default" role="navigation">
        <div class="container">
@@ -33,9 +35,48 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
            </button>
+<div class="div-logo">
+           <a class="navbar-brand" href="#!/">
 
-           <a class="navbar-brand" href="#/"><img class="logo-img" src="images/logo-accroche.png"></a>
+
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="678px" height="220px" viewBox="0 0 678 220" enable-background="new 0 0 678 220" xml:space="preserve" style="
+    width: 100px;
+    height: 30px;
+">
+<g>
+  <path fill="#FF48B0" d="M62.089,209.651c-35.513,0-48.303-13.022-48.303-31.965v-13.015h1.19
+    c8.522,6.391,21.545,11.357,40.011,11.357c16.339,0,21.543-3.787,21.543-10.178c0-5.919-3.081-8.292-30.067-12.073
+    c-23.44-3.316-35.749-13.973-35.749-34.808c0-31.249,29.591-47.109,59.422-47.109c28.886,0,46.405,11.594,46.405,31.013v13.495
+    h-1.179c-8.76-6.39-22.497-10.893-40.016-10.893c-16.805,0-22.251,4.503-22.251,9.95c0,4.969,2.834,6.627,30.067,11.121
+    c21.782,3.56,36.456,15.396,36.456,37.411C119.619,191.889,97.836,209.651,62.089,209.651"></path>
+  <path fill="#FF48B0" d="M180.305,209.416c-25.096,0-55.641-11.838-55.641-41.435c0-28.884,20.832-43.557,68.189-43.557h6.393
+    v-5.447c0-10.657-8.291-13.259-26.042-13.259c-24.387,0-33.386,5.676-42.624,14.203H129.4v-15.868
+    c0-16.097,16.806-32.192,53.984-32.192c35.981,0,59.422,18.226,59.422,56.586v20.12
+    C242.806,195.914,227.653,209.416,180.305,209.416 M200.189,152.355h-8.992c-17.051,0-23.917,4.263-23.917,13.019
+    c0,8.289,5.211,12.557,17.759,12.557c8.048,0,15.149-4.025,15.149-15.859V152.355z"></path>
+  <path fill="#FF48B0" d="M361.166,205.863c-19.888,0-26.046-6.627-26.046-26.519v-45.693c0-17.52-5.92-25.331-21.07-25.331
+    c-13.019,0-20.127,8.756-20.127,24.625v72.918H278.77c-19.173,0-29.83-7.575-29.83-26.519v-45.693
+    c0-37.41,24.863-61.797,66.296-61.797c46.161,0,64.872,24.387,64.872,62.978v71.031H361.166z"></path>
+  <path fill="#FF48B0" d="M404.609,52.684c5.926-4.502,13.973-8.763,23.437-8.763h4.738v31.722h38.118V91.51
+    c0,11.129-11.836,19.649-22.021,19.649h-16.097v47.118c0,8.755,5.446,13.966,14.203,13.966c10.663,0,15.624-0.943,20.362-2.845
+    h1.181v17.525c0,10.893-9.935,20.835-33.379,20.835c-22.251,0-46.174-10.65-46.174-46.409V80.617
+    C388.978,68.781,395.853,59.31,404.609,52.684"></path>
+  <path fill="#FF48B0" d="M529.923,156.854h-19.412c2.602,13.021,13.25,19.182,31.963,19.182c20.835,0,33.851-3.315,41.19-8.289
+    h1.659v10.415c0,16.581-13.495,31.497-50.669,31.497c-44.979,0-68.652-30.313-68.652-66.3c0-39.534,26.754-71.733,67.001-71.733
+    c34.087,0,60.605,19.17,60.605,52.321C593.608,149.991,573.967,156.854,529.923,156.854 M533.003,105.247
+    c-15.86,0-22.492,10.179-23.68,22.729h17.526c21.299,0,25.089-3.324,25.089-9.006C551.938,112.344,546.026,105.247,533.003,105.247
+     M528.264,29.241c7.578-7.812,17.055-12.78,27.705-12.78c9.705,0,15.151,6.147,15.151,13.96c0,9.713-7.103,17.997-14.443,21.078
+    c-8.528,3.553-20.835,5.21-35.516,5.21h-10.888v-1.186C514.299,45.815,521.161,36.581,528.264,29.241"></path>
+  <path fill="#FF48B0" d="M612.501,66.691h-20.949c-6.748,0-12.26-5.507-12.26-12.254c0-6.747,5.512-12.248,12.26-12.248h20.949
+    V21.766c0-6.923,5.683-12.605,12.605-12.605c6.93,0,12.611,5.682,12.611,12.605v20.423h20.949c6.747,0,12.254,5.501,12.254,12.248
+    c0,6.748-5.507,12.254-12.254,12.254h-20.949v20.417c0,6.929-5.682,12.612-12.611,12.612c-6.923,0-12.605-5.683-12.605-12.612
+    V66.691z"></path>
+</g>
+</svg>
+
+           </a></div>
          </div>
+
          <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
      <menu></menu>
@@ -44,16 +85,9 @@
      </div>
    </div>
 </header>
-    <div class="container">
-    <div ng-view="" autoscroll="true"></div>
-    </div>
+    <div class="container" ng-view="" autoscroll="true"></div>
 
-    <div class="footer" style="background:#fff;">
-      <div class="container">
-        <p>With <span class="glyphicon glyphicon-heart"></span> by Santé+</p>
-      </div>
-    </div>
-
+    
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -62,8 +96,7 @@
        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
        }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+       ga('create', 'UA-79440683-1', { 'cookieDomain': 'none' });
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -79,8 +112,16 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/angular-encode-uri/dist/angular-encode-uri.js"></script>
+    <script src="bower_components/angular-inview/angular-inview.js"></script>
+    <script src="bower_components/SHA-1/sha1.js"></script>
+    <script src="bower_components/angulartics/src/angulartics.js"></script>
+    <script src="bower_components/angulartics-google-analytics/lib/angulartics-ga.js"></script>
+    <script src="bower_components/ngDfp/angular-dfp.js"></script>
     <!-- endbower -->
+    <script src="bower_components/angular-seo/angular-seo.js"></script>
     <!-- endbuild -->
+    <script src="http://coop182.github.io/jquery.dfp.js/jquery.dfp.min.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
@@ -95,7 +136,8 @@
         <script src="scripts/filters/filters.js"></script>
         <script src="scripts/directives/menu.js"></script>
         <script src="scripts/services/menuservice.js"></script>
-
+        <script src="scripts/controllers/categorie.js"></script>
+        <script src="scripts/directives/loading.js"></script>
 
 
         <!-- endbuild -->

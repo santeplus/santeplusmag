@@ -23,11 +23,17 @@ angular.module('santeplusApp')
     	}
 
         this.getMenuElements = function() {
-                return elements;    
+            _.each(elements, function(elem){
+                elem.slug = elem.url.substring(elem.url.indexOf(".com/") + 5, elem.url.length - 1)
+            });
+            console.log(elements);
+            return elements;    
                 
         }
         this.setElements = function (elems){
+            
             this.elements = elems;
+            
         }
 
         // From WebService

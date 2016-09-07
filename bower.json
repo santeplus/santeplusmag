@@ -10,8 +10,11 @@
     "angular-route": "^1.4.0",
     "angular-sanitize": "^1.4.0",
     "angular-touch": "^1.4.0",
-    "underscore": "^1.8.3",    
-    "angular-encode-uri": "^1.0.0"
+    "underscore": "^1.8.3",
+    "angular-encode-uri": "^1.0.0",
+    "angular-inview": "^1.5.7",
+    "angulartics-google-analytics": "^0.2.0",
+    "ngDfp": "^0.14.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0",

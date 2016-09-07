@@ -1,4 +1,0 @@
-<div id="articles" when-scroll-ends="loadMore()">
-    <article-item ng-repeat="article in articles"></article-item>
-</div>
-

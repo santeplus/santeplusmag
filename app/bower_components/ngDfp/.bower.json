@@ -1,0 +1,21 @@
+{
+  "name": "ngDfp",
+  "version": "0.14.0",
+  "main": "angular-dfp.js",
+  "ignore": [
+    "bower.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "homepage": "https://github.com/ianmurrays/ngDfp",
+  "_release": "0.14.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.14.0",
+    "commit": "43233729af42c5a1ee360516701b21e14b3df3c5"
+  },
+  "_source": "https://github.com/ianmurrays/ngDfp.git",
+  "_target": "^0.14.0",
+  "_originalSource": "ngDfp",
+  "_direct": true
+}

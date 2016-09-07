@@ -10,6 +10,7 @@
 angular.module('santeplusApp')
     .service('articleService', function ($http, $q, advertisingService ) {
     	var currentArticles = [];
+        var navigationArticles = [];
         var currentPage = 1;
 
         this.init = function()
@@ -59,10 +60,18 @@ angular.module('santeplusApp')
         }
 
         // From Current Object
+        /*
     	this.getArticle = function(id)
     	{
     		return _.findWhere(currentArticles, {'id': parseInt(id)});
     	}
+        */
+
+        // From Current Object
+        this.getArticle = function(slug)
+        {
+            return _.findWhere(currentArticles, {'relative_permalink': slug });
+        }
 
         // From WebService
         this.getArticleById = function(id)
@@ -70,6 +79,19 @@ angular.module('santeplusApp')
             var request = $http({
                 method: "get",
                 url: "http://www.santeplusmag.com/wp-json/wp/v2/posts/" + id,
+                params: {
+                    action: "get"
+                }
+            });
+            return( request.then( handleSuccess, handleError ) );
+        }
+
+        // From WebService
+        this.getArticleBySlug = function(slug)
+        {
+            var request = $http({
+                method: "get",
+                url: "http://www.santeplusmag.com/wp-json/wp/v2/posts?filter[name]=" + slug,
                 params: {
                     action: "get"
                 }
@@ -94,6 +116,20 @@ angular.module('santeplusApp')
             article.content.rendered = advertisingService.injectADX(article.content.rendered, "center", "1236");
             return article;
         }
+
+        this.getArticlesAfterDate = function(date)
+        {
+            var request = $http({
+                method: "get",
+                url: "http://www.santeplusmag.com/wp-json/wp/v2/posts?per_page=10&page=1&filter[date_query][after]=" + date,
+                params: {
+                    action: "get"
+                }
+            });
+            return( request.then( handleSuccess, handleError ) );       
+        }
+
+        
 
         function getLastParagraphNumber(html)
         {

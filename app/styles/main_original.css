@@ -1,0 +1,622 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+    padding: 0;
+    padding-top: 50px;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    background: hsl(0, 0%, 98%);
+}
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+    box-shadow: 0 3px 15px -8px #000;
+    background: #fff;
+}
+
+.header .navbar-collapse {
+    position: absolute;
+}
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    height: 52px;
+    top: 0;
+    width: 100%;
+}
+.btn-next {
+    background-color: #337AB7;
+    color: #fff;
+    font-size: 16px;
+    padding: 9px;
+    font-weight: bold;
+    margin: 0 0 0 50px;
+}
+.ads {
+    margin: 5% auto;
+    text-align: center;
+}
+
+menu {
+    margin: 0;
+    padding: 10px;
+}
+
+.header .navbar-toggle {
+    background-color: #fff;
+    float: left;
+    margin: 12px 0 9px 25px !important;
+    border: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
+{
+  background-color: #ffffff;
+}
+
+.navbar-nav > li > a {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    line-height: 20px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+    margin: 0px -10px;
+    font-size: 15px;
+}
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 0px;
+  padding-right: 0px;
+  background: rgba(255, 255, 255, 0);
+}
+
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+  height: 52px;
+  top: 0;
+  width: 100%;
+}
+.nav-up {
+  top: -52px; 
+  width: 100%
+}
+header.nav-down {
+    height: 52px;
+    position: fixed;
+    top: 0;
+    transition: top 0.15s ease-in-out;
+    width: 100%;
+}
+h1, .h1 {
+    font-size: 33px;
+    padding: 0 15px 0 19px;
+    margin: 11px;
+    font-weight: bold;
+    color: #3D3838;
+}
+#ligatus_article {
+    padding: 0 15px;
+}
+#taboola_article {
+    padding: 0 15px;
+}
+
+header.nav-down
+{z-index: 999;}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+img.logo-img {
+    width: 80px;
+}
+#content img {
+    height: auto !important;
+}
+
+.share_icone
+{
+  display: block;
+  float: left; 
+  line-height: 15px;
+  width:30px;
+}
+
+
+.partage-button- div
+{
+width:20px;
+margin:auto;
+background: rgba(255, 255, 255, 0);
+}
+
+
+button.partage-button- {
+    background: none;
+    color: #fff;
+    border: 0px;
+    padding: 4px;
+    margin-left: 5px;
+}
+ul.nav.navbar-nav {
+    margin: 7.5px 0px;
+}
+
+img.img-article {
+    width: 100%;
+    border: 1px solid #e7e7e7;
+}
+h4.ng-binding {
+    margin-left: 10px;
+}
+
+/* Custom page footer */
+.footer {
+  color: #777;
+  text-align: center;
+  max-width: 730px;
+}
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+.article-category {
+    color: #B1B1B1;
+    font-size: 18px;
+    margin-top: -35px;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+p {
+    margin: 5px 5px 10px;
+    font-size: 21px;
+    color: #4c4d4e;
+    padding: 0 5px 0 9px;
+    line-height: 35px;
+    margin-right: 10px;
+}
+h2.h2post {
+    font-size: 24px;
+}
+.share_btn
+{
+  height: 40px;
+  margin: 0 7px;
+}
+h3, .h3 {
+    font-size: 22px;
+    margin-left: 5px;
+    margin-right: 10px;
+    line-height: 35px;
+    padding: 0 5px 0 9px;
+    margin-top: 10px;
+    color: #4C4C4C;
+    font-weight: bold;
+}
+
+h4, .h4 {
+    font-size: 21px;
+    margin-left: 5px;
+    margin-right: 10px;
+    padding: 0 5px 0 9px;
+    margin-top: 10px;
+    color: #4C4C4C;
+    line-height: 35px;
+    font-weight: bold;
+}
+
+.mobile_ads
+{text-align: center;margin: 20px 0;}
+h2 {
+    font-size: 25px;
+    line-height: 1.3em;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0 5px 0 9px;
+    color: #4C4C4C;
+    font-weight: bold;
+}
+.article-item-parent {
+    margin: 15px 0;
+    box-shadow: 0px 0 8px 0px #909090;
+}
+.partage-button {
+    text-align: center;
+    text-align: center;
+    padding:10px 0 9px 0;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.22));
+    background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.22));
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.22));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.22));
+} 
+
+.partage-button-home {
+    text-align: center;
+    text-align: center;
+    padding: 10px 0 9px 0;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08));
+    background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08));
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08));
+}
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+button.navbar-toggle.collapsed {
+    /* margin-right: 30px; */
+}
+button.navbar-toggle {
+    margin-right: 30px;
+} 
+
+.navbar-default .navbar-toggle {
+}
+a.navbar-brand {
+    margin-left: 5%;
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 12px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+.list-unstyled {
+  display: block;
+  float: left;
+  margin-bottom: 5px;
+
+}
+.div-logo a {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;
+    display: block;
+
+}
+.div-logo {
+    width: 65%;
+    text-align: center;
+    float: right;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  } 
+
+  .socialbar{
+    display: inline-flex !important;
+    list-style-type: none !important;
+    padding: 5px 0 0 10px;
+    margin: 0;
+  }
+.socialbar img {
+    /* width: 75%; */
+    margin: 0 10px;
+}
+
+.socialbar li {
+    margin: 0 -5px;
+    padding: 0;
+}
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 40px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.wrapper {
+    position: relative;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+ul .mobile_ads
+{
+    margin-left: -30px;
+}
+
+ul li .mobile_ads
+{
+  margin-left: -85px;
+}
+
+
+#content > img {
+   width: 100%;
+   height: inherit;
+}
+
+#header_81555 span {
+  display: inline-block!important;
+  padding-right: 15px!important;
+  /* background: #fff!important; */
+  font-family: helvetica!important;
+  font-weight: bold!important;
+  font-size: 1.1em!important;
+  color: #e9167f !important;
+  text-transform: uppercase!important;
+  border: 0px!important;
+  font-family: MirrorExtraCondBold, Arial, sans-serif!important;
+  height: 35px;
+  padding-top: 15px;
+}
+#header_81555 {
+  font-family: MirrorExtraCondBold, Arial, sans-serif!important;
+  line-height: 32px!important;
+  color: #222222!important;
+  background: rgba(0,0,0,0) url("../../../wp-content/themes/santeplusmag/images/pattern.png") repeat scroll 0 0!important;
+  font-weight: 600!important;
+  margin-bottom: 20px!important;
+  text-transform: uppercase!important;
+  border: 0px!important;
+  height: 35px;
+}
+.lig_teaser_81555 {
+  font-family: MirrorExtraCondBold, Arial, sans-serif!important;
+  font-size: 1.385em!important;
+  color: #337AB7 !important;
+  font-weight: bold!important;
+  text-decoration: none!important;
+  line-height: 1!important;
+  transition: all 0.3s ease-in-out!important;
+  display: block!important;
+  padding: 0 0 5px 0!important;
+}
+.lig_teaser_81555:hover {
+  text-decoration: none!important;
+  color: #337AB7!important;
+}
+.lig_headline_81555 {
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif!important;
+  font-size: 13px!important;
+  color: #4c4d4e!important;
+  font-weight: normal!important;
+  text-decoration: none!important;
+  line-height: 24px!important;
+  transition: all 0.3s ease-in-out!important;
+  display: block!important;
+}
+#header_81557 {
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif!important;
+  line-height: 24px!important;
+  color: #222222!important;
+  background: rgba(0,0,0,0) url("../../../wp-content/themes/santeplusmag/images/pattern.png") repeat scroll 0 0!important;
+  font-size: 16px!important;
+  font-weight: 600!important;
+  margin-bottom: 20px!important;
+  text-transform: uppercase!important;
+  border: 0px!important;
+}
+#header_81557 span {
+  display: inline-block!important;
+  padding-right: 15px!important;
+  background: #fff!important;
+  font-family: MirrorExtraCondBold, Arial, sans-serif!important;
+  font-size: 2em!important;
+  padding-top: 5px!important;
+  padding-bottom: 2px!important;
+  font-weight: bold!important;
+  color: #2e83b5!important;
+  text-transform: uppercase!important;
+  border: 0px!important;
+}
+.lig_teaser_81557:hover {
+  text-decoration: none!important;
+  color: #e9167f!important;
+}
+.lig_headline_81557 {
+  font-family: helvetica!important;
+  font-size: 13px!important;
+  color: #4c4d4e!important;
+  font-weight: normal!important;
+  text-decoration: none!important;
+  line-height: 24px!important;
+  transition: all 0.3s ease-in-out!important;
+  display: block!important;
+}
+.lig_teaser_81557 {
+  font-family: MirrorExtraCondBold, Arial, sans-serif!important;
+  font-size: 1.385em!important;
+  color: #4c4d4e!important;
+  font-weight: bold!important;
+  text-decoration: none!important;
+  line-height: 20px!important;
+  transition: all 0.3s ease-in-out!important;
+  display: block!important;
+  padding: 0 0 5px 0!important;
+}
+.trc_elastic .thumbBlock_holder {
+  position: relative!important;
+  width: 100%!important;
+  margin-bottom: 15px!important;
+}
+.thumbnails-b [class*=span] {
+  display: inline-block!important;
+  padding-right: 15px!important;
+  background: #fff!important;
+  font-family: MirrorExtraCondBold, Arial, sans-serif!important;
+  font-weight: bold!important;
+  font-size: 1.885em!important;
+  color: #2e83b5!important;
+  text-transform: uppercase!important;
+  padding-top: 6px;
+  height: 30px!important;
+}
+.thumbnails-b .trc_rbox_header {
+  font-family: MirrorExtraCondBold, Arial, sans-serif!important;
+  line-height: 24px!important;
+  color: #222222!important;
+  background: rgba(0,0,0,0) url("../../../wp-content/themes/santeplusmag/images/pattern.png") repeat scroll 0 0!important;
+  font-size: 16px!important;
+  font-weight: 600!important;
+  margin-bottom: 20px!important;
+  text-transform: uppercase!important;
+  height: 30px!important;
+}
+.thumbnails-b .videoCube .video-label-box {
+  font-family: MirrorExtraCondBold, Arial, sans-serif!important;
+  font-size: 1.385em!important;
+  color: #4c4d4e!important;
+  font-weight: normal!important;
+  text-decoration: none!important;
+  line-height: 20px!important;
+  transition: all 0.3s ease-in-out!important;
+  display: block!important;
+  padding: 0 0 5px 0!important;
+}
+.thumbnails-b .videoCube:hover .video-label-box .video-title {
+  text-decoration: none!important;
+  color: #e9167f!important;
+}
+.thumbnails-b .syndicatedItem .video-title {
+  font-family: MirrorExtraCondBold, Arial, sans-serif!important;
+  font-size: 1.385em!important;
+  color: #e9167f!important;
+}
+span.trc_rbox_header_span {
+    display: inline-block!important;
+    padding-right: 15px!important;
+    /* background: #fff!important; */
+    font-family: helvetica!important;
+    font-weight: bold!important;
+    font-size: 1.2em!important;
+    color: #e9167f !important;
+    text-transform: uppercase!important;
+    border: 0px!important;
+    font-family: MirrorExtraCondBold, Arial, sans-serif!important;
+    height: 35px;
+    padding: 8px 0 0 0;
+}
+
+span.video-label.video-title {
+    font-family: MirrorExtraCondBold, Arial, sans-serif!important;
+    font-size: 1.8em!important;
+    color: #3D3838 !important;
+    font-weight: bold!important;
+    text-decoration: none!important;
+    line-height: 1!important;
+    transition: all 0.3s ease-in-out!important;
+    display: block!important;
+    padding: 0 0 5px 0!important;
+}
+
+.display-none
+{
+  display: none;
+}
+
+@media screen and (min-width: 768px){
+  .body
+  {
+    background: hsl(0, 0%, 98%);
+  
+  }
+.thumbnails-rr .videoCube.syndicatedItem{
+    width: 31% !important;
+}
+
+.trc_elastic_trc_49627 div.videoCube:nth-of-type(-n+4) {
+    width: 31%;
+}
+}
+
+@media (max-width: 1025px) {
+ .navbar-header {
+     float: none;
+ }
+ .navbar-left,.navbar-right {
+     float: none !important;
+ }
+ .navbar-toggle {
+     display: block;
+ }
+ .navbar-collapse {
+     border-top: 1px solid transparent;
+     box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+ }
+ .navbar-fixed-top {
+     top: 0;
+     border-width: 0 0 1px;
+ }
+ .navbar-collapse.collapse {
+     display: none!important;
+ }
+ .navbar-nav {
+     float: none!important;
+     margin-top: 7.5px;
+ }
+ .navbar-nav>li {
+     float: none;
+ }
+ .navbar-nav>li>a {
+     padding-top: 10px;
+     padding-bottom: 10px;
+ }
+ .collapse.in{
+     display:block !important;
+ }
+}
+
+.navbar-header {
+    height: 55px !important;
+}
+
+#content a {
+    color: #4C4C4C !important;
+}
