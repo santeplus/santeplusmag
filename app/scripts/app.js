@@ -41,7 +41,7 @@ angular
               controller: 'CategorieCtrl',
               controllerAs: 'categorie'
             })
-            .when('/:id', {
+            .when('/:id/', {
               templateUrl: 'views/article.html',
               controller: 'ArticleCtrl',
               controllerAs: 'article'

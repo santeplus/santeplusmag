@@ -32,7 +32,7 @@ angular.module('santeplusApp')
     $scope.hideFooter = function(inview)
     {
         $scope.isVisible = inview; 
-    }
+    };
     /*
     if(articleService.getCurrentArticles().length)
     {
@@ -59,7 +59,7 @@ angular.module('santeplusApp')
         articleService.getArticles().then(function( articles ) {
             articleService.populateArticles(articles);
             $scope.articles = articleService.getCurrentArticles();
-            if(callback != null )
+            if(callback !== null )
             {
                 callback(articles[0]);
             }
