@@ -6,12 +6,10 @@
   <p ng-bind-html="article.excerpt.rendered" class="article-item-text"> </p>
   <div class="partage-button-home" style="border-top: #ECECEC solid 1px;">
     <ul class="socialbar" style="display: -webkit-inline-box !important; list-style-type: none !important; padding: 0; width: 215px; margin: auto;">
-      <li> <a href="http://www.facebook.com/sharer.php?u={{article.link|encodeUri}}&t={{article.title.rendered}}" data-icon="facebook" target="_blank" xtclib="share::facebook"> <img class="share_btn" src="images/Facebook.svg"> </a> </li>
-      <li> <a href="whatsapp://send?text={{article.link|encodeUri}}" data-icon="whatsapp" xtclib="share::whatsapp"> <img class="share_btn" src="images/WhatsApp.svg"> </a> </li>
-      <li> <a target="_blank" href="http://pinterest.com/pin/create/button/?url={{article.link|encodeUri}}&media={{article.featured_image_thumbnail_url}}&description={{article.title.rendered}}" class="pin-it-button" count-layout="horizontal"> <img border="0" class="share_btn" src="images/Pinterest.svg" title="Pin It" /> </a> </li>
-      <li> <a class="twitter-share-button"
-  href="https://twitter.com/intent/tweet?text={{article.title.rendered}} http://www.santeplusmag.com/?p={{article.id}}"
-  data-size="large"> <img border="0" class="share_btn" src="images/Twitter.svg" title="Pin It" /> </a> </li>
+      <li> <a analytics-on analytics-event="Click" analytics-category="Social - Home" analytics-label="Facebook" href="http://www.facebook.com/sharer.php?u={{article.link|encodeUri}}&t={{article.title.rendered}}" data-icon="facebook" target="_blank" xtclib="share::facebook"> <img class="share_btn" src="images/Facebook.svg"> </a> </li>
+      <li> <a analytics-on analytics-event="Click" analytics-category="Social - Article" analytics-label="Whatsapp" href="whatsapp://send?text={{article.link|encodeUri}}" data-icon="whatsapp" target="_blank" xtclib="share::whatsapp"> <img class="share_btn" src="images/WhatsApp.svg"> </a> </li>
+      <li> <a analytics-on analytics-event="Click" analytics-category="Social - Article" analytics-label="Pinterest" target="_blank" href="http://pinterest.com/pin/create/button/?url={{article.link|encodeUri}}&media={{article.featured_image_thumbnail_url}}&description={{article.title.rendered}}" class="pin-it-button" count-layout="horizontal"> <img border="0" class="share_btn" src="images/Pinterest.svg" title="Pin It" /> </a> </li>
+      <li> <a analytics-on analytics-event="Click" analytics-category="Social - Article" analytics-label="Twitter" class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{article.title.rendered}} http://www.santeplusmag.com/?p={{article.id}}" data-size="large" target="_blank"> <img border="0" class="share_btn" src="images/Twitter.svg" title="Pin It" /> </a> </li>
     </ul>
   </div>
 </div>
