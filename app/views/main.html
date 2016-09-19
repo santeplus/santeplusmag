@@ -1,11 +1,11 @@
 
 <div id="articles" when-scroll-ends="loadMore()">
   <div ng-repeat="article in articles | without:currentArticle.id" class="article-list">
-  	<ad-placement-dfp ng-if="$index % 6 == 0 && $index != 0" adunit-code="NEW_MOBILE_HOME" adunit-dimensions="300x250,336x280,320x50" adunit-targeting='{"position": "{{$index}}" }' ></ad-placement-dfp>
+  	<ad-placement-adx ng-if="$index % 6 == 0 && $index != 0" ad-client="ca-pub-5343163216163772" ad-style="display:inline-block;width:300px;height:250px;" ad-slot="7208831722" ad-format="300x250" ></ad-placement-adx>
   	<div class="article-item-parent">
   		<article-item></article-item>
   	</div>
-  	<ad-placement-dfp ng-if="$index % 6 == 2" adunit-code="NEW_MOBILE_HOME" adunit-dimensions="300x250,336x280,320x50" adunit-targeting='{"position": "{{$index}}" }'></ad-placement-dfp>
+  	<ad-placement-adx ng-if="$index % 6 == 2" ad-client="ca-pub-5343163216163772" ad-style="display:inline-block;width:300px;height:250px;" ad-slot="8685539602" ad-format="300x250"></ad-placement-adx>
   </div>
   <ng-loading ng-show="loading"></ng-loading>
 </div>

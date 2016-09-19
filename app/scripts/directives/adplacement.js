@@ -54,19 +54,20 @@ angular.module('santeplusApp')
         }
     };
 })
-.directive('adPlacementAdx', function () {
+.directive('adPlacementAdx', function ($timeout) {
     return {
-        template: '<div class="mobile_ads"><img class="adsbygoogle" data-ad-client="{{adClient}}" data-ad-slot="{{adSlot}}" style="{{inlineStyle}}" data-ad-format="{{adFormat}}" src="http://www.hamovhotov.com/advertisement/wp-content/uploads/2007/03/300x250ad.gif" /></div>',
+        template: '<div class="mobile_ads"><ins class="adsbygoogle" data-ad-client="{{adClient}}" data-ad-slot="{{adSlot}}" style="{{adStyle}}"></ins></div>',
         restrict: 'E',
         replace: true,
         scope : {
             adClient : '@',
             adSlot : '@',
-            inlineStyle : '@',
-            adFormat : '@'
+            adStyle : '@'
         },
         link: function postLink(scope, element, attrs) {
-            
+            $timeout(function () {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }, 1);
         }
     };
 }).directive('adPlacementDfp', function ($timeout) {

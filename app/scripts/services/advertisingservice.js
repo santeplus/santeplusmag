@@ -36,8 +36,6 @@ angular.module('santeplusApp')
         }
       this.injectADX = function(html, position, adSlot)
       {
-            console.log(html);
-            console.log(adSlot);
         var adx_html = "<img data-ad-slot='"+ adSlot +"'' src='http://www.hamovhotov.com/advertisement/wp-content/uploads/2007/03/300x250ad.gif' />";
         var ad_html = "<div class='mobile_ads'>" + adx_html + "</div>";
         var elem = $("<div><div>");
@@ -291,4 +289,59 @@ function injectAds()
                 passbackAdx(adUnit);
             }
         });
+}
+
+
+function injectAds_ADX()
+{
+    var width = window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;
+    var dimensions;
+    if(width >= 336)
+        dimensions = "width:336px;height:280px";
+    else
+        dimensions = "width:300px;height:250px";
+    var elem = $("#content");
+    var adSlot = "1111";
+
+    
+        $.expr[':'].textEquals = $.expr.createPseudo(function(arg) {
+            return function( elem ) {
+                return $(elem).text().match("^" + arg + "$");
+            };
+        });
+        
+        var ids = [ 2368942162,3845650042,5322357922,6799065802,9752481562,8275773682,2229189442,3705897322,5182605202];
+        
+        // First Ad
+        var element_excerpt = elem.find("h2");
+        $('<div class="mobile_ads"><ins class="adsbygoogle" style="display:inline-block;' + dimensions + '" data-ad-client="ca-pub-5343163216163772" data-ad-slot="' + ids[0] + '"></ins></div>').insertAfter(element_excerpt);
+        (adsbygoogle = window.adsbygoogle || []).push({});
+
+        var elements_all = elem.find("p:not(:empty):not(:textEquals('\\n')), li, h3, h4");
+        var current_y = 0;
+        var adx_id = 2;
+
+        // get the height of all elements
+        var article_height = 0;
+        for (var i = 0; i < elements_all.length; i++) {
+            article_height += getHeight(elements_all[i]);
+        }
+        // Insert Mid Ad
+        for (var i = 0; i < elements_all.length; i++) {
+            current_y += getHeight(elements_all[i]);
+            if(current_y >= (article_height / 2 ))
+            {
+                $('<div class="mobile_ads"><ins class="adsbygoogle" style="display:inline-block;' + dimensions + '" data-ad-client="ca-pub-5343163216163772" data-ad-slot="' + ids[adx_id] + '"></ins></div>').insertAfter(elements_all[i]);
+                (adsbygoogle = window.adsbygoogle || []).push({});
+
+                adx_id++;
+                break;
+            }                    
+        }
+
+        // Insert Last Ad
+        $('<div class="mobile_ads"><ins class="adsbygoogle" style="display:inline-block;' + dimensions + '" data-ad-client="ca-pub-5343163216163772" data-ad-slot="' + ids[adx_id] + '"></ins></div>').insertBefore(elements_all[elements_all.length - 1]);
+        (adsbygoogle = window.adsbygoogle || []).push({});
+
+    
 }

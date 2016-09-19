@@ -8,20 +8,20 @@
  * Controller of the santeplusApp
  */
 angular.module('santeplusApp')
-.controller('ArticleCtrl', function ($analytics, $routeParams, $scope, articleService, advertisingService, $location, $timeout) {
+.controller('ArticleCtrl', function ($analytics, $routeParams, $scope, articleService, advertisingService, $location, $timeout, $anchorScroll) {
     advertisingService.refreshDfp();
     var articleId = $routeParams.id;
     if(articleService.getArticle(articleId))
     {
     	$scope.currentArticle = articleService.getArticle(articleId);
-        $timeout(injectAds, 1000);
+        $timeout(injectAds_ADX, 200);
    	}
   	else
   	{
         $scope.loading = true;
   		articleService.getArticleBySlug(articleId).then(function( article ) {
             $scope.currentArticle = article[0];
-            $timeout(injectAds, 1000);
+            $timeout(injectAds_ADX, 200);
             $scope.htmlReady();
             $scope.loading = false;
         });
@@ -33,25 +33,23 @@ angular.module('santeplusApp')
     {
         $scope.isVisible = inview; 
     };
-    /*
-    if(articleService.getCurrentArticles().length)
-    {
-        $scope.articles = articleService.getCurrentArticles();
-        //advertisingService.refreshDfp();
-    }
-    else
-    {
-    */
-        articleService.getArticles().then(function( articles ) {
-            articleService.populateArticles(articles);
-            $scope.articles = articleService.getCurrentArticles();
-        });
-    /*
-    }
-    */
 
-    // Check if the article is accessed directly from the link
-    
+    articleService.getArticles().then(function( articles ) {
+        articleService.populateArticles(articles);
+        $scope.articles = articleService.getCurrentArticles();
+    });
+
+    articleService.getPopularArticles().then(function( articles ) {
+        $scope.topArticles = articles;
+    });
+
+    $scope.readMore = function()
+    {
+        $('html, body').animate({
+          scrollTop: document.body.scrollTop + window.innerHeight - 55
+        }, 1000);
+        $scope.showHome = true;
+    }
 
     $scope.loadMore = function(callback)
     {
@@ -75,7 +73,7 @@ angular.module('santeplusApp')
             {
                 if(i != $scope.articles.length - 1)
                 {
-                    nextArticleId = $scope.articles[i+1].id;
+                    nextArticleId = $scope.articles[i+1].slug;
                     openArticle(nextArticleId);
                 }
                 else
@@ -93,12 +91,14 @@ angular.module('santeplusApp')
         {
             $analytics.pageTrack('/');
             $scope.homePageOpened = true;
+            $location.hash('bottom');
+            $anchorScroll();
         }
     }
 
-    function openArticle(id)
+    function openArticle(slug)
     {
-        $location.path('/article/' + id );
+        $location.path('/' + slug + '/' );
     }
 
     function loadNextArticles()

@@ -642,3 +642,22 @@ span.video-label.video-title {
 .article-item-text p {
     padding: 0px 15px;
 }
+
+table {
+    width: 100% !important;
+}
+
+.lireplus {
+    margin: 0 auto 30px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+.lireplus span
+{
+  color: #e9167f;
+  cursor: pointer;
+}

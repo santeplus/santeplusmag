@@ -46,7 +46,7 @@ angular.module('santeplusApp')
         this.getPopularArticles = function() {
             var request = $http({
                 method: "get",
-                url: "http://www.santeplusmag.com/wp-json/wp/v2/popular_posts?per_page=3&page=" + currentPage,
+                url: "http://www.santeplusmag.com/wp-json/wp/v2/popular_posts?per_page=3&page=1",
                 params: {
                     action: "get"
                 }
