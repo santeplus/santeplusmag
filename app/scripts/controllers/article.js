@@ -91,8 +91,6 @@ angular.module('santeplusApp')
         {
             $analytics.pageTrack('/');
             $scope.homePageOpened = true;
-            $location.hash('bottom');
-            $anchorScroll();
         }
     }
 
