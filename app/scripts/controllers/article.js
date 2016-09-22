@@ -49,6 +49,7 @@ angular.module('santeplusApp')
           scrollTop: document.body.scrollTop + window.innerHeight - 55
         }, 1000);
         $scope.showHome = true;
+        $scope.homePage();
     }
 
     $scope.loadMore = function(callback)
