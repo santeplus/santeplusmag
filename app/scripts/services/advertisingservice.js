@@ -313,7 +313,7 @@ function injectAds_ADX()
         var ids = [ 2368942162,3845650042,5322357922,6799065802,9752481562,8275773682,2229189442,3705897322,5182605202];
         
         // First Ad
-        var element_excerpt = elem.find("h2, blockquote, p");
+        var element_excerpt = elem.find("h2, blockquote, p:not(:empty):not(:textEquals('\\n'))");
         $('<div class="mobile_ads"><ins class="adsbygoogle" style="display:inline-block;' + dimensions + '" data-ad-client="ca-pub-5343163216163772" data-ad-slot="' + ids[0] + '"></ins></div>').insertAfter(element_excerpt[0]);
         (adsbygoogle = window.adsbygoogle || []).push({});
 
