@@ -14,7 +14,7 @@ angular.module('santeplusApp')
 		$event.preventDefault();
 		$http({
             method: 'POST',
-            url: 'http://www.santeplusmag.com/contact/',
+            url: 'http://www.santeplusmag.com/services.php',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
             },
