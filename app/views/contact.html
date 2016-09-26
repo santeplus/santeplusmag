@@ -1,21 +1,22 @@
 <div class="col-md-12" style="padding-top:10px" >
-	<form>
-	  	<div class="form-group">
+	<form name="contact" ng-submit="send($event)" >
+		<p class="success" ng-show="success">Votre message a été envoyé avec succès ! Merci pour vos commentaires </p>
+	  	<div class="form-group" ng-class="{'has-error': contact.username.$invalid && contact.username.$touched }">
 	  	  <label for="exampleInputEmail1">Nom et prénom</label>
-	  	  <input type="text" class="form-control" id="exampleInputEmail1">
+	  	  <input ng-model="username" name="username" type="text" class="form-control" id="exampleInputEmail1" required>
 	  	</div>
-	  	<div class="form-group">
+	  	<div class="form-group" ng-class="{'has-error': contact.usermail.$invalid && contact.usermail.$touched }">
 	  	  <label for="exampleInputEmail1">Adresse e-mail</label>
-	  	  <input type="email" class="form-control" id="exampleInputEmail1">
+	  	  <input ng-model="usermail" name="usermail" type="email" class="form-control" id="exampleInputEmail1" required>
 	  	</div>
-	  	<div class="form-group">
-	  	  <label for="exampleInputEmail1">Sujet</label>
-	  	  <input type="text" class="form-control" id="exampleInputEmail1">
+	  	<div class="form-group" ng-class="{'has-error': contact.subject.$invalid && contact.subject.$touched }">
+	  	  <label for="exampleInputEmail1" ng-class="{'has-error': contact.username.$invalid && contact.username.$touched }">Sujet</label>
+	  	  <input ng-model="subject" name="subject" type="text" class="form-control" id="exampleInputEmail1" required>
 	  	</div>
-	  	<div class="form-group">
+	  	<div class="form-group" ng-class="{'has-error': contact.message.$invalid && contact.message.$touched }">
 	  	  <label for="exampleInputEmail1">Message</label>
-	  	  <textarea class="form-control" rows="5"></textarea>
+	  	  <textarea ng-model="message" name="message" class="form-control" rows="5" required></textarea>
 	  	</div>
-	  	<button type="submit" class="btn btn-default">Envoyer</button>
+	  	<button  type="submit" class="btn btn-default">Envoyer</button>
 	</form>
 </div>
